@@ -45,10 +45,10 @@ def display_patient(patient):
 # Ejemplo de uso
 if __name__ == "__main__":
     # Cadena de conexión a MongoDB (reemplaza con tu propia cadena de conexión)
-    uri = "mongodb+srv://mardugo:clave@sampleinformationservic.t2yog.mongodb.net/?retryWrites=true&w=majority&appName=SampleInformationService"
+    uri = "mongodb+srv://JulianaCabrejo:Enzoj28#@ifmerjuli.7ev8g.mongodb.net/?retryWrites=true&w=majority&appName=ifmerJuli"
 
     # Nombre de la base de datos y la colección
-    db_name = "SamplePatientService"
+    db_name = "ifmerJuli"
     collection_name = "patients"
 
     # Conectar a MongoDB
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     
     # Identifier específico a buscar (reemplaza con los valores que desees)
     identifier_type = "cc"
-    identifier_value = "1020713756"
+    identifier_value = "1021392209"
     
     # Buscar el paciente por identifier
     patient = find_patient_by_identifier(collection, identifier_type, identifier_value)
