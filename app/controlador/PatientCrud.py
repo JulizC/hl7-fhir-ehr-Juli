@@ -1,16 +1,16 @@
 from connection import connect_to_mongodb
 from bson import ObjectId
-from fhir.resources.patient import Patient
+from fhir.resources.patient import Patients
 import json
 
-collection = connect_to_mongodb("SamplePatientService", "patients")
+collection = connect_to_mongodb("ifmerJuli", "patients")
 
-def GetPatientById(patient_id: str):
+def GetPatientById(patients_id: str):
     try:
-        patient = collection.find_one({"_id": ObjectId(patient_id)})
+        patient = collection.find_one({"_id": ObjectId(patients_id)})
         if patient:
-            patient["_id"] = str(patient["_id"])
-            return "success", patient
+            patients["_id"] = str(patients["_id"])
+            return "success", patients
         return "notFound", None
     except Exception as e:
         return f"notFound", None
